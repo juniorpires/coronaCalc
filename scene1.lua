@@ -1,12 +1,27 @@
 ---------------------------------------------------------------------------------
 --
--- scene.lua
+-- scene1.lua
 --
 ---------------------------------------------------------------------------------
 controller = {
   
     saida=""
 }
+
+
+function controller.apaga(event)
+  if ( event.phase == "began" ) then
+        
+        local size = string.len(controller.saida)
+        
+        controller.saida = string.sub(controller.saida,1,size-1)
+        controller.result.text = controller.saida
+        
+    end
+    
+    return true
+
+end
 
 function controller.getValor(event)
    if ( event.phase == "began" ) then
@@ -52,9 +67,6 @@ function controller.setZero(event)
 end
 
 
-
-
-
 local viewLoader = require("view")
 local view = viewLoader:setView("layout.xml",controller)
 local composer = require( "composer" )
@@ -71,11 +83,6 @@ function scene:create( event )
     local sceneGroup = self.view
     
     controller.result.text = "0"
-    
-    
-    
-   
-    
     
     controller.btIgu:setFillColor(color.hex("272d25"))
     controller.btIgu:setStrokeColor(color.hex("ffffff"))

@@ -4,7 +4,7 @@
     <LinearLayout id="layoutLinear1">
       <Button  label="CE" width="60" height="50" touch="setZero"/>
       <Button  label=" " width="60" height="50"/>
-      <Button  label=" " width="60" height="50"/>
+      <Button  label="apaga" width="60" height="50" touch="apaga"  />
       <Button id="btDiv" label="/" width="60" height="50" touch="getValor"/>
     </LinearLayout>
     <LinearLayout id="layoutLinear2">
@@ -26,7 +26,7 @@
       <Button id="btSom" label="+" width="60" height="50" touch="getValor"/>
     </LinearLayout>
     <LinearLayout id="layoutLinear5">
-      <Button id="bt1" label=" " width="60" height="50" touch="getValor" />
+      <Button label=" " width="60" height="50"/>
       <Button id="bt0" label="0" width="60" height="50" touch="getValor"/>
       <Button id="btPon" label="." width="60" height="50" touch="getValor"/>
       <Button id="btIgu" label="=" width="60" height="50" touch="calcula"/>
